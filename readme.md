@@ -15,7 +15,7 @@ PDF Tool CLI is a command-line interface application for manipulating PDF files.
 ## TO Use Directly
 - The package is hosted on NPM as of now . Inorder to use it write command :
   ```
-  npm i npm i pdf-manipulator-cli
+  npm i  pdf-manipulator-cli
   ```
 ## Installation
 
