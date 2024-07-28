@@ -12,38 +12,22 @@ PDF Tool CLI is a command-line interface application for manipulating PDF files.
 
 - Node.js (version 12 or higher)
 - npm (usually comes with Node.js)
-## TO Use Directly
-- The package is hosted on NPM as of now . Inorder to use it write command :
-  ```
-  npm i  pdf-manipulator-cli
-  ```
+
 ## Installation
 
-1. Clone the repository:
+You can install PDF Tool CLI globally using npm:
 ```
-git clone https://github.com/yourusername/pdf-tool-cli.git
-
-```
-2. Install dependencies:
-```
-npm install
-```
-3. Build the project:
-```
-npm run build
-```
-4. Link the package globally:
-```
-npm link
+npm i pdf-manipulator-cli
 ```
 ## Usage
 
 After installation, you can use the `pdf-tool` command from anywhere in your terminal.
+
 ### Merge PDFs
 ```
-pdf-tool merge <input2.pdf> <input2.1pdf>  -o <output_pattern.pdf>
+pdf-tool merge <input1.pdf> <input2.pdf> ... -o <output.pdf>
 ```
-### Split PDFs
+### Split PDF
 ```
 pdf-tool split <input.pdf> -o <output_pattern.pdf>
 ```
@@ -53,45 +37,9 @@ pdf-tool extract <input.pdf> -p <pages> -o <output.pdf>
 ```
 Replace `<pages>` with page numbers or ranges (e.g., 1,3,5-7).
 
-## Configuration
-
-The project uses TypeScript. The configuration is in `tsconfig.json`. 
-
-Key configurations:
-- Output directory: `./dist`
-- Source directory: `./src`
-
-## Project Structure
-```
-pdf-tool-cli/
-├── src/
-│   ├── commands/
-│   │   ├── merge.ts
-│   │   ├── split.ts
-│   │   └── extract.ts
-│   ├── utils/
-│   │   └── pdfUtils.ts
-│   └── index.ts
-├── package.json
-└── tsconfig.json
-```
-## Development
-
-1. Make changes in the `src` directory
-2. Rebuild the project: `npm run build`
-3. Test your changes: `pdf-tool <command>`
-
-## Troubleshooting
-
-If the `pdf-tool` command is not recognized, ensure that the npm global bin directory is in your PATH.
-
-For Windows:
-1. Run `npm config get prefix`
-2. Add `<npm_prefix>\node_modules\pdf-tool-cli` to your PATH
-
-For Unix-like systems:
-The symlink should work automatically. You can check with `which pdf-tool`
-
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## License
+- Free Tool, Hell Yeah 🔥
