@@ -18,7 +18,7 @@ PDF Tool CLI is a command-line interface application for manipulating PDF files.
 1. Clone the repository:
 ```
 git clone https://github.com/yourusername/pdf-tool-cli.git
-cd pdf-tool-cli
+
 ```
 2. Install dependencies:
 ```
