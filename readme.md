@@ -35,8 +35,11 @@ npm link
 ## Usage
 
 After installation, you can use the `pdf-tool` command from anywhere in your terminal.
-
 ### Merge PDFs
+```
+pdf-tool merge <input2.pdf> <input2.1pdf>  -o <output_pattern.pdf>
+```
+### Split PDFs
 ```
 pdf-tool split <input.pdf> -o <output_pattern.pdf>
 ```
