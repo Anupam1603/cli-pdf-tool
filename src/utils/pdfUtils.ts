@@ -11,7 +11,15 @@ export async function writePdf(doc: PDFDocument, path: string): Promise<void> {
   await fs.writeFile(path, pdfBytes);
 }
 
-
+export async function ensureDir(dirPath: string): Promise<void> {
+    try {
+      await fs.mkdir(dirPath, { recursive: true });
+    } catch (error) {
+      if ((error as NodeJS.ErrnoException).code !== 'EEXIST') {
+        throw error;
+      }
+    }
+  }
 
 export function parsePageRanges(pageString: string): number[] {
   const pages: number[] = [];

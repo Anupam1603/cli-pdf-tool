@@ -1,6 +1,7 @@
 # Dependency directories
 node_modules/
 
+pdf_data
 # TypeScript compilation output
 dist/
 

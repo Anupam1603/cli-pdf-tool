@@ -1,4 +1,4 @@
-# PDF Tool CLI
+# PDF Tool CLI 👨‍💻
 
 PDF Tool CLI is a command-line interface application for manipulating PDF files. It provides functionality to merge multiple PDFs, split a PDF into separate pages, and extract specific pages from a PDF.
 

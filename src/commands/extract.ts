@@ -1,8 +1,12 @@
+import path from 'path';
 import { PDFDocument } from 'pdf-lib';
-import { readPdf, writePdf, parsePageRanges } from '../utils/pdfUtils';
+import { readPdf, writePdf, parsePageRanges, ensureDir } from '../utils/pdfUtils';
 
 export async function extract(input: string, options: { pages: string, output: string }) {
   try {
+    const outputDir = path.join(process.cwd(), 'pdf_tool_output', 'extracted');
+    await ensureDir(outputDir);
+    
     const pdf = await readPdf(input);
     const pageCount = pdf.getPageCount();
     const pagesToExtract = parsePageRanges(options.pages);
@@ -18,8 +22,9 @@ export async function extract(input: string, options: { pages: string, output: s
       }
     }
     
-    await writePdf(newPdf, options.output);
-    console.log(`Extracted pages saved as ${options.output}`);
+    const outputPath = path.join(outputDir, options.output);
+    await writePdf(newPdf, outputPath);
+    console.log(`Extracted pages saved as ${outputPath}`);
   } catch (error) {
     console.error('Error extracting pages:', error);
   }
